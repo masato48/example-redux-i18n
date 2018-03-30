@@ -8,7 +8,9 @@ const locale = require('react-redux-i18n').I18n
 class App extends Component {
 
   handleChangLanguage = (l) => {
-    this.props.setLang(l)
+    if (this.props.l !== l) {
+      this.props.setLang(l)
+    }
   }
 
   render() {
